@@ -11,7 +11,6 @@ services:
     ports:
       - '2222:22'
     volumes:
-      - appName-api-vendor-sync:/app/vendor
       - appName-api-app-sync:/app
     environment:
       APP_ENV: dev
@@ -23,11 +22,8 @@ services:
     ports:
       - '9090:80'
     volumes:
-      - appName-api-vendor-sync:/app/vendor
       - appName-api-app-sync:/app
 
 volumes:
-  appName-api-vendor-sync:
-    external: true
   appName-api-app-sync:
     external: true

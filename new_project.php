@@ -7,7 +7,8 @@ if (isset($argv[1])) {
         "install.sh",
         "Makefile",
         "docker/nginx/nginx.conf",
-        "docker/php-fpm/Dockerfile"
+        "docker/php-fpm/Dockerfile",
+        "docker-sync.yml"
     ];
 	foreach ($files as $file) {
 
