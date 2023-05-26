@@ -1,8 +1,8 @@
 version: '3.7'
 
 services:
-  appName-mysql:
-    container_name: appName-mysql-dev
+  appName-db:
+    container_name: appName-db-dev
     ports:
       - '33063:3306'
 

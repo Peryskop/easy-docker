@@ -30,16 +30,12 @@ ifeq ($(OS),Darwin)
 	docker volume create --name=appName-api-app-sync
 	docker-compose -f docker-compose.yaml -f docker-compose-dev.local.yaml up -d --remove-orphans
 	docker-sync start
-else
-	docker-compose up -d
 endif
 
 stop_dev_local:
 ifeq ($(OS),Darwin)
 	docker-compose stop
 	docker-sync stop
-else
-	docker-compose stop
 endif
 
 sync_clean:
@@ -47,26 +43,11 @@ ifeq ($(OS),Darwin)
 	docker-sync clean
 endif
 
-build_prod:
-	docker-compose -f docker-compose.yaml -f docker-compose-prod.yaml build
-
-start_prod:
-	docker-compose -f docker-compose.yaml -f docker-compose-prod.yaml up -d
-
-build_stage:
-	docker-compose -f docker-compose.yaml -f docker-compose-stage.yaml build
-
-start_stage:
-	docker-compose -f docker-compose.yaml -f docker-compose-stage.yaml up -d
-
 build_dev:
 	docker-compose -f docker-compose.yaml -f docker-compose-dev.yaml build
 
 start_dev:
 	docker-compose -f docker-compose.yaml -f docker-compose-dev.yaml up -d
-
-stop:
-	docker-compose down
 
 execphp:
 	docker-compose exec appName-php bash
