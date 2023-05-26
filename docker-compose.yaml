@@ -16,7 +16,7 @@ services:
       - ./docker/php-fpm/php.ini:/usr/local/etc/php/php.ini:ro
       - .:/app:cached
     depends_on:
-      - appName-mysql
+      - appName-db
 
   appName-nginx:
     image: nginx:latest
