@@ -11,7 +11,7 @@ services:
     environment:
       APP_ENV: dev
       APP_VERSION: dev
-      DATABASE_URL: mysql://root:@appName-mysql:3306/appName_dev
+      DATABASE_URL: mysql://root:@appName-db:3306/appName_dev
 
   appName-nginx:
     container_name: appName-nginx-dev
