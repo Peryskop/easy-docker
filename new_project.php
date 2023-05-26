@@ -4,8 +4,6 @@ if (isset($argv[1])) {
 	    "docker-compose.yaml",
         "docker-compose-dev.yaml",
         "docker-compose-dev.local.yaml",
-        "docker-compose-stage.yaml",
-        "docker-compose-prod.yaml",
         "install.sh",
         "Makefile",
         "docker/nginx/nginx.conf",

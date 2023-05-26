@@ -1,5 +1,5 @@
 ##1. Create symfony project
-```composer create-project symfony/skeleton project_name```	
+```composer create-project symfony/skeleton:"5.4.*"" project_name```	
 
 ##2. Use script to change names in docker files
 ```php new_project.php project_name```
